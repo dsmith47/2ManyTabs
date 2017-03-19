@@ -63,7 +63,7 @@ function writeNavbar(){
 chrome.extension.onMessage.addListener(function(msg,sender, sendResponse){
   console.log("UPDATE");
   //remove old navbar
-  bar.parentNode.removeChild(bar);
+  document.body.removeChild( document.getElementById("2ManyTabsNavBar") );
   document.body.style['margin-top']="0px";
   //Write a new navbar
   writeNavbar();
